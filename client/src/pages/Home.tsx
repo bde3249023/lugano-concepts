@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import { ArrowRight, Lock, Shield, Zap } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -25,19 +24,19 @@ export default function Home() {
       >
         <div className="container flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="relative w-8 h-8 flex items-center justify-center">
-              <div className="absolute inset-0 bg-primary/20 blur-lg rounded-full"></div>
-              <span className="font-serif text-2xl font-bold tracking-tighter relative z-10">L</span>
-            </div>
+            {/* Logo Icon Removed as requested */}
             <span className="font-serif text-xl font-bold tracking-tight">LUGANO.AI</span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
             <a href="#vision" className="hover:text-primary transition-colors">Vision</a>
             <a href="#technology" className="hover:text-primary transition-colors">Technology</a>
-            <a href="#investors" className="hover:text-primary transition-colors">Investors</a>
           </div>
-          <Button variant="outline" className="border-primary/50 text-primary hover:bg-primary/10 hover:text-primary hover:border-primary transition-all duration-300">
-            Request Access
+          <Button 
+            variant="outline" 
+            className="border-primary/50 text-primary hover:bg-primary/10 hover:text-primary hover:border-primary transition-all duration-300"
+            asChild
+          >
+            <a href="mailto:contact@lugano.ai">Request Intro</a>
           </Button>
         </div>
       </nav>
@@ -67,22 +66,17 @@ export default function Home() {
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-400">
-            An inevitable shift is underway. We are building the infrastructure for a world where every company and individual owns their intelligence. Private. Provable. Cost-efficient.
+            We build the infrastructure that lets you run powerful AI on your most sensitive data. No leaks. No trade-offs. Just pure intelligence.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-md animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-600">
-            <Input 
-              type="email" 
-              placeholder="Enter your work email" 
-              className="h-12 bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-primary/50 focus-visible:border-primary transition-all"
-            />
-            <Button size="lg" className="w-full sm:w-auto h-12 px-8 bg-primary hover:bg-primary/90 text-primary-foreground font-medium shadow-[0_0_20px_-5px_var(--color-primary)] transition-all hover:scale-105">
-              Request Access
+          <div className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-600">
+            <Button size="lg" className="h-12 px-8 bg-primary hover:bg-primary/90 text-primary-foreground font-medium shadow-[0_0_20px_-5px_var(--color-primary)] transition-all hover:scale-105" asChild>
+              <a href="mailto:contact@lugano.ai">Request Intro</a>
             </Button>
           </div>
           
           <p className="mt-6 text-xs text-muted-foreground/60 uppercase tracking-widest animate-in fade-in duration-1000 delay-1000">
-            Limited Availability • Seed Stage • Fortune 1000 Priority
+            Limited Availability • Seed Stage
           </p>
         </div>
       </section>
@@ -116,35 +110,30 @@ export default function Home() {
                 <span className="text-primary">Revealed.</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                This isn't Lugano vs ChatGPT—it's Lugano AND ChatGPT. We are the privacy layer that makes internal enterprise AI possible. 
+                Public AI has a ceiling: your secrets. We removed it. 
                 <br /><br />
-                The most valuable data is the most sensitive. We've built the infrastructure to run AI on that data, without ever exposing it to public clouds.
+                Lugano is the privacy layer that sits between your data and the world's most powerful models. It’s not a firewall; it’s a vault with a brain. Run your own private AI, on your own terms, without ever exposing a single byte to the public cloud.
               </p>
               
-              <div className="grid grid-cols-2 gap-8 border-t border-white/10 pt-8">
-                <div>
-                  <div className="text-4xl font-serif font-bold text-white mb-1">$150B</div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wider">Market Opportunity</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-serif font-bold text-white mb-1">16:1</div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wider">LTV:CAC Ratio</div>
-                </div>
+              <div className="border-t border-white/10 pt-8">
+                 <p className="text-xl font-serif italic text-white/80">
+                  "This isn't Lugano vs ChatGPT. It's Lugano AND ChatGPT."
+                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* The Arbitrage Section */}
+      {/* The Technology Section */}
       <section id="technology" className="py-32 bg-white/[0.02] relative">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
         
         <div className="container">
           <div className="max-w-3xl mx-auto text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">The Efficiency Arbitrage</h2>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">Impossible Efficiency</h2>
             <p className="text-lg text-muted-foreground">
-              90% of AI compute spend is wasted on inefficient GPU utilization. We turn that waste into a competitive edge, creating a massive arbitrage opportunity in the infrastructure market.
+              We don't just encrypt; we optimize. Our proprietary orchestration slashes GPU costs by 90%, turning waste into compute.
             </p>
           </div>
 
@@ -153,13 +142,13 @@ export default function Home() {
               {
                 icon: Zap,
                 title: "90% Cost Reduction",
-                desc: "Proprietary GPU orchestration algorithms that slash compute costs for Fortune 1000 enterprises.",
+                desc: "Proprietary GPU orchestration algorithms that slash compute costs. Do more with less.",
                 stat: "Immediate ROI"
               },
               {
                 icon: Lock,
                 title: "Encrypted Environments",
-                desc: "Runs 100% in encrypted environments (TEEs) ensuring data never leaves your control.",
+                desc: "Runs 100% in encrypted environments (TEEs). Your data never leaves your control.",
                 stat: "SOC2 Type 2"
               },
               {
@@ -200,20 +189,17 @@ export default function Home() {
         
         <div className="container relative z-10 text-center">
           <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8 tracking-tight">
-            Get the Alpha.
+            Ready to Build?
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-12">
-            The window to define the privacy infrastructure layer is closing. <br />
-            Join the $200M+ track record team building the inevitable future.
+            The technology is ready. The privacy is provable. <br />
+            The only missing piece is you.
           </p>
           
           <div className="flex flex-col items-center gap-6">
-            <Button size="lg" className="h-14 px-10 text-lg bg-white text-black hover:bg-white/90 font-medium shadow-[0_0_30px_-10px_rgba(255,255,255,0.3)] transition-all hover:scale-105">
-              Request Investor Deck
+            <Button size="lg" className="h-14 px-10 text-lg bg-white text-black hover:bg-white/90 font-medium shadow-[0_0_30px_-10px_rgba(255,255,255,0.3)] transition-all hover:scale-105" asChild>
+              <a href="mailto:contact@lugano.ai">Request Intro</a>
             </Button>
-            <p className="text-sm text-muted-foreground">
-              <a href="mailto:contact@lugano.ai" className="hover:text-white transition-colors border-b border-transparent hover:border-white/30 pb-0.5">contact@lugano.ai</a>
-            </p>
           </div>
         </div>
       </section>
