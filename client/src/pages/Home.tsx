@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Lock, Shield, Zap } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -16,6 +17,11 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground overflow-x-hidden selection:bg-primary/30">
+      <Helmet>
+        <title>Lugano.ai | The Private AI Infrastructure Layer</title>
+        <meta name="description" content="Lugano.ai is the privacy infrastructure layer for enterprise AI. Run powerful models on your most sensitive data with zero leaks and zero trade-offs." />
+      </Helmet>
+
       {/* Navigation */}
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -24,12 +30,11 @@ export default function Home() {
       >
         <div className="container flex items-center justify-between">
           <div className="flex items-center gap-2">
-            {/* Logo Icon Removed as requested */}
             <span className="font-serif text-xl font-bold tracking-tight">LUGANO.AI</span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
-            <a href="#vision" className="hover:text-primary transition-colors">Vision</a>
-            <a href="#technology" className="hover:text-primary transition-colors">Technology</a>
+            <a href="#vision" className="hover:text-primary transition-colors">The Paradigm</a>
+            <a href="#technology" className="hover:text-primary transition-colors">The Architecture</a>
           </div>
           <Button 
             variant="outline" 
@@ -61,12 +66,12 @@ export default function Home() {
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold tracking-tight leading-[1.1] mb-6 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
-            The Future of AI <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/50">Is Private.</span>
+            Your Secrets <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/50">Are Your Edge.</span>
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-400">
-            We build the infrastructure that lets you run powerful AI on your most sensitive data. No leaks. No trade-offs. Just pure intelligence.
+            Public AI levels the playing field. Private AI tilts it in your favor. We build the vault where your most sensitive data meets the world's most powerful intelligence.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-600">
@@ -74,10 +79,6 @@ export default function Home() {
               <a href="mailto:contact@lugano.ai">Request Intro</a>
             </Button>
           </div>
-          
-          <p className="mt-6 text-xs text-muted-foreground/60 uppercase tracking-widest animate-in fade-in duration-1000 delay-1000">
-            Limited Availability • Seed Stage
-          </p>
         </div>
       </section>
 
@@ -106,18 +107,18 @@ export default function Home() {
             
             <div className="order-1 md:order-2">
               <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">
-                The Hidden Layer <br />
-                <span className="text-primary">Revealed.</span>
+                The Paradox of <br />
+                <span className="text-primary">Open Intelligence.</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Public AI has a ceiling: your secrets. We removed it. 
+                To win, you need the best models. To survive, you need to keep your data hidden. Until now, you had to choose.
                 <br /><br />
-                Lugano is the privacy layer that sits between your data and the world's most powerful models. It’s not a firewall; it’s a vault with a brain. Run your own private AI, on your own terms, without ever exposing a single byte to the public cloud.
+                Lugano breaks this binary. We are the invisible layer that allows you to deploy state-of-the-art AI on your proprietary data without it ever leaving your perimeter. It’s not just security; it’s sovereignty.
               </p>
               
               <div className="border-t border-white/10 pt-8">
                  <p className="text-xl font-serif italic text-white/80">
-                  "This isn't Lugano vs ChatGPT. It's Lugano AND ChatGPT."
+                  "The most valuable intelligence is the kind nobody else can see."
                  </p>
               </div>
             </div>
@@ -131,9 +132,9 @@ export default function Home() {
         
         <div className="container">
           <div className="max-w-3xl mx-auto text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">Impossible Efficiency</h2>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">The Architecture of Silence</h2>
             <p className="text-lg text-muted-foreground">
-              We don't just encrypt; we optimize. Our proprietary orchestration slashes GPU costs by 90%, turning waste into compute.
+              True privacy isn't a policy. It's physics. We use advanced cryptography and hardware isolation to ensure your data remains mathematically invisible to the outside world.
             </p>
           </div>
 
@@ -141,21 +142,21 @@ export default function Home() {
             {[
               {
                 icon: Zap,
-                title: "90% Cost Reduction",
-                desc: "Proprietary GPU orchestration algorithms that slash compute costs. Do more with less.",
-                stat: "Immediate ROI"
+                title: "Compute Without Compromise",
+                desc: "Our orchestration engine doesn't just protect; it accelerates. Slash GPU waste by 90% while running fully encrypted workloads.",
+                stat: "Efficiency Arbitrage"
               },
               {
                 icon: Lock,
-                title: "Encrypted Environments",
-                desc: "Runs 100% in encrypted environments (TEEs). Your data never leaves your control.",
-                stat: "SOC2 Type 2"
+                title: "The Black Box",
+                desc: "Your data runs inside Trusted Execution Environments (TEEs). Even the cloud provider hosting the hardware cannot see what's inside.",
+                stat: "Hardware-Level Isolation"
               },
               {
                 icon: Shield,
-                title: "Provable Privacy",
-                desc: "First-mover in provable privacy compliance using advanced zero-knowledge proofs.",
-                stat: "GDPR Compliant"
+                title: "Mathematical Certainty",
+                desc: "We don't ask you to trust us. We use Zero-Knowledge Proofs so you can verify the integrity of every computation yourself.",
+                stat: "Trustless Verification"
               }
             ].map((item, i) => (
               <Card key={i} className="glass-panel border-white/5 p-8 hover:border-primary/30 transition-all duration-500 group">
@@ -189,11 +190,11 @@ export default function Home() {
         
         <div className="container relative z-10 text-center">
           <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8 tracking-tight">
-            Ready to Build?
+            Own the Infrastructure.
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-12">
-            The technology is ready. The privacy is provable. <br />
-            The only missing piece is you.
+            The future belongs to those who control their own intelligence. <br />
+            Step into the vault.
           </p>
           
           <div className="flex flex-col items-center gap-6">
