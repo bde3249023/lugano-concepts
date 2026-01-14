@@ -1,5 +1,4 @@
 import LuganoLogo from "@/components/LuganoLogo";
-import PrivacyGlobe from "@/components/PrivacyGlobe";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -106,7 +105,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 2 - The Paradigm (Privacy Constellation) */}
+      {/* Section 2 - The Paradigm (Impossible Architecture) */}
       <section id="paradigm" className="relative min-h-screen flex items-center py-24 bg-black overflow-hidden">
         <div className="container relative z-10 grid md:grid-cols-2 gap-20 items-center">
           <div className="md:pr-12 order-2 md:order-1">
@@ -136,22 +135,20 @@ export default function Home() {
             </div>
           </div>
           
-          {/* Privacy Globe Visualization */}
-          <div className="relative h-[600px] w-full order-1 md:order-2 flex items-center justify-center">
-             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.15)_0%,transparent_70%)]"></div>
-             <PrivacyGlobe />
+          {/* Impossible Architecture Image */}
+          <div className="relative h-[600px] w-full order-1 md:order-2 flex items-center justify-center overflow-hidden rounded-sm">
+             <div className="absolute inset-0 bg-purple-900/10 mix-blend-overlay z-10"></div>
+             <img 
+               src="/images/impossible-architecture.jpg" 
+               alt="Impossible Architecture" 
+               className="w-full h-full object-cover opacity-80 scale-105 hover:scale-110 transition-transform duration-[2000ms]"
+             />
              
              {/* Floating Labels */}
-             <div className="absolute top-1/4 right-10 bg-black/50 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full animate-bounce duration-[3000ms]">
+             <div className="absolute top-1/4 right-10 bg-black/50 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full z-20">
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
                   <span className="text-[10px] font-mono uppercase tracking-widest">ZK-Proof Verified</span>
-                </div>
-             </div>
-             <div className="absolute bottom-1/3 left-0 bg-black/50 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full animate-bounce duration-[4000ms]">
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
-                  <span className="text-[10px] font-mono uppercase tracking-widest">Encrypted Payload</span>
                 </div>
              </div>
           </div>
