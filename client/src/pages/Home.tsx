@@ -131,7 +131,7 @@ export default function Home() {
           
           {/* Abstract Visual Element */}
           <div className="hidden md:block relative h-[600px] w-full border-l border-white/10 pl-12">
-             <div className="absolute top-0 left-12 w-px h-32 bg-gradient-to-b from-white to-transparent"></div>
+             <div className="absolute top-0 left-0 w-px h-32 bg-gradient-to-b from-white to-transparent"></div>
              <div className="flex flex-col justify-between h-full py-12">
                 {[
                   { label: "Zero-Knowledge Proofs", status: "Validated" },
