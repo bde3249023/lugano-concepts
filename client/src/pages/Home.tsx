@@ -105,52 +105,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 2 - The Paradigm (Impossible Architecture) */}
+      {/* Section 2 - The Paradigm (Background Image Layout) */}
       <section id="paradigm" className="relative min-h-screen flex items-center py-24 bg-black overflow-hidden">
-        <div className="container relative z-10 grid md:grid-cols-2 gap-20 items-center">
-          <div className="md:pr-12 order-2 md:order-1">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/images/impossible-architecture.jpg" 
+            alt="Impossible Architecture" 
+            className="w-full h-full object-cover opacity-40"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
+        </div>
+
+        <div className="container relative z-10">
+          <div className="max-w-2xl">
             <div className="mb-6 flex items-center gap-2">
                <div className="w-2 h-2 bg-purple-600 animate-pulse"></div>
                <span className="text-xs font-mono text-purple-500 uppercase tracking-widest">Classified Intel</span>
             </div>
-            <h2 className="text-5xl md:text-7xl font-serif mb-8 leading-none">
-              The Paradox of <br />
-              <span className="text-white/40 italic">Open Intelligence.</span>
-            </h2>
-            <div className="space-y-8 text-lg text-white/70 font-light leading-relaxed border-l border-purple-900/30 pl-8">
-              <p>
-                To win, you need the best models. To survive, you need to keep your data hidden. 
-                Until now, you had to choose.
-              </p>
-              <p>
-                Lugano breaks this binary. We are the invisible layer that allows you to deploy 
-                state-of-the-art AI on your proprietary data without it ever leaving your perimeter. 
-                It’s not just security; it’s sovereignty.
-              </p>
+            
+            {/* Vertical Line Fix: Moved to left-0 */}
+            <div className="relative pl-12 border-l border-purple-500/30">
+              <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-purple-500 to-transparent"></div>
+              
+              <h2 className="text-5xl md:text-7xl font-serif mb-8 leading-none">
+                The Paradox of <br />
+                <span className="text-white/40 italic">Open Intelligence.</span>
+              </h2>
+              
+              <div className="space-y-8 text-lg text-white/80 font-light leading-relaxed">
+                <p>
+                  To win, you need the best models. To survive, you need to keep your data hidden. 
+                  Until now, you had to choose.
+                </p>
+                <p>
+                  Lugano breaks this binary. We are the invisible layer that allows you to deploy 
+                  state-of-the-art AI on your proprietary data without it ever leaving your perimeter. 
+                  It’s not just security; it’s sovereignty.
+                </p>
+              </div>
+              
+              <div className="mt-12 pt-12 border-t border-white/10">
+                <p className="text-2xl font-serif italic text-white">
+                  "The most valuable intelligence is the kind nobody else can see."
+                </p>
+              </div>
             </div>
-            <div className="mt-12 pt-12 border-t border-white/10">
-              <p className="text-2xl font-serif italic text-white">
-                "The most valuable intelligence is the kind nobody else can see."
-              </p>
-            </div>
-          </div>
-          
-          {/* Impossible Architecture Image */}
-          <div className="relative h-[600px] w-full order-1 md:order-2 flex items-center justify-center overflow-hidden rounded-sm">
-             <div className="absolute inset-0 bg-purple-900/10 mix-blend-overlay z-10"></div>
-             <img 
-               src="/images/impossible-architecture.jpg" 
-               alt="Impossible Architecture" 
-               className="w-full h-full object-cover opacity-80 scale-105 hover:scale-110 transition-transform duration-[2000ms]"
-             />
-             
-             {/* Floating Labels */}
-             <div className="absolute top-1/4 right-10 bg-black/50 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full z-20">
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                  <span className="text-[10px] font-mono uppercase tracking-widest">ZK-Proof Verified</span>
-                </div>
-             </div>
           </div>
         </div>
       </section>
