@@ -1,4 +1,3 @@
-import DecryptText from "@/components/DecryptText";
 import LuganoLogo from "@/components/LuganoLogo";
 import PrivacyGlobe from "@/components/PrivacyGlobe";
 import { Button } from "@/components/ui/button";
@@ -8,7 +7,6 @@ import { Helmet } from "react-helmet";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
-  const [redactedMode, setRedactedMode] = useState(false);
   const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -23,26 +21,12 @@ export default function Home() {
       }
     };
 
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key.toLowerCase() === 'r') {
-        setRedactedMode(prev => !prev);
-      }
-    };
-
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("keydown", handleKeyDown);
     
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
-
-  const Redactable = ({ children }: { children: React.ReactNode }) => (
-    <span className={`transition-all duration-300 ${redactedMode ? "bg-white text-transparent select-none rounded-sm px-1" : ""}`}>
-      {children}
-    </span>
-  );
 
   return (
     <div className="min-h-screen bg-black text-white selection:bg-purple-500/30 selection:text-purple-100 overflow-x-hidden font-sans relative">
@@ -50,13 +34,6 @@ export default function Home() {
         <title>Lugano.ai | The Architecture of Silence</title>
         <meta name="description" content="Lugano.ai is the privacy infrastructure layer for enterprise AI. Run powerful models on your most sensitive data with zero leaks and zero trade-offs." />
       </Helmet>
-
-      {/* Redacted Mode Hint */}
-      <div className="fixed bottom-8 left-8 z-50 hidden md:block animate-pulse">
-        <p className="text-[10px] font-mono text-white/20 uppercase tracking-widest">
-          Press <span className="text-purple-500 font-bold">'R'</span> to {redactedMode ? "Reveal" : "Redact"}
-        </p>
-      </div>
 
       {/* Navigation - Minimal & Floating */}
       <nav
@@ -101,20 +78,20 @@ export default function Home() {
           <div className="mb-8 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
             <span className="inline-block h-px w-12 bg-purple-500/50 mb-4"></span>
             <p className="text-xs font-mono text-purple-400/70 uppercase tracking-[0.3em]">
-              <DecryptText text="The Privacy Infrastructure Layer" speed={30} delay={500} />
+              The Privacy Infrastructure Layer
             </p>
           </div>
           
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif font-medium tracking-tight leading-[0.9] mb-12 mix-blend-difference animate-in fade-in zoom-in-95 duration-1000 delay-500">
-            Your <Redactable>Secrets</Redactable> <br />
+            Your Secrets <br />
             <span className="italic text-white/90 relative">
-              Are Your <Redactable>Edge.</Redactable>
+              Are Your Edge.
             </span>
           </h1>
           
           <div className="max-w-xl mx-auto animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-700">
             <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10">
-              Public AI levels the playing field. <Redactable>Private AI</Redactable> tilts it in your favor. 
+              Public AI levels the playing field. Private AI tilts it in your favor. 
               Enter the vault where intelligence meets silence.
             </p>
             
@@ -143,13 +120,13 @@ export default function Home() {
             </h2>
             <div className="space-y-8 text-lg text-white/70 font-light leading-relaxed border-l border-purple-900/30 pl-8">
               <p>
-                To win, you need the best models. To survive, you need to keep your <Redactable>data hidden</Redactable>. 
+                To win, you need the best models. To survive, you need to keep your data hidden. 
                 Until now, you had to choose.
               </p>
               <p>
                 Lugano breaks this binary. We are the invisible layer that allows you to deploy 
                 state-of-the-art AI on your proprietary data without it ever leaving your perimeter. 
-                It’s not just security; it’s <Redactable>sovereignty</Redactable>.
+                It’s not just security; it’s sovereignty.
               </p>
             </div>
             <div className="mt-12 pt-12 border-t border-white/10">
@@ -232,7 +209,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-3xl font-serif mb-6 group-hover:text-white transition-colors">{item.title}</h3>
                 <p className="text-white/50 leading-relaxed text-sm group-hover:text-white/70 transition-colors">
-                  <Redactable>{item.desc}</Redactable>
+                  {item.desc}
                 </p>
                 <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-purple-600 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"></div>
               </div>
