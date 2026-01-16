@@ -29,6 +29,7 @@ export default function Home() {
       <Helmet>
         <title>Lugano.ai | The Sovereign Agent</title>
         <meta name="description" content="Lugano.ai is the first sovereign agentic AI. Autonomous capability with zero-knowledge privacy. Your secrets are your edge." />
+        <meta name="keywords" content="Sovereign AI, Zero-Knowledge Proofs, Private Agentic AI, Encrypted Intelligence, Trusted Execution Environments, Privacy Infrastructure, Enterprise AI, Secure AI, ZK-Rollups, Confidential Computing" />
       </Helmet>
 
       {/* Navigation - Minimal & Floating */}
