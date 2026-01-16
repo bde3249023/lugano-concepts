@@ -27,8 +27,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white selection:bg-white/20 selection:text-white overflow-x-hidden font-sans">
       <Helmet>
-        <title>Lugano.ai | The Architecture of Silence</title>
-        <meta name="description" content="Lugano.ai is the privacy infrastructure layer for enterprise AI. Run powerful models on your most sensitive data with zero leaks and zero trade-offs." />
+        <title>Lugano.ai | The Sovereign Agent</title>
+        <meta name="description" content="Lugano.ai is the first sovereign agentic AI. Autonomous capability with zero-knowledge privacy. Your secrets are your edge." />
       </Helmet>
 
       {/* Navigation - Minimal & Floating */}
@@ -69,7 +69,7 @@ export default function Home() {
         <div className="container relative z-10 flex flex-col items-center text-center">
           <div className="mb-8 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
             <span className="inline-block h-px w-12 bg-white/50 mb-4"></span>
-            <p className="text-xs font-mono text-white/70 uppercase tracking-[0.3em]">The Privacy Infrastructure Layer</p>
+            <p className="text-xs font-mono text-white/70 uppercase tracking-[0.3em]">The Sovereign Agent</p>
           </div>
           
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif font-medium tracking-tight leading-[0.9] mb-12 mix-blend-difference animate-in fade-in zoom-in-95 duration-1000 delay-500">
@@ -79,8 +79,8 @@ export default function Home() {
           
           <div className="max-w-xl mx-auto animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-700">
             <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10">
-              Public AI levels the playing field. Private AI tilts it in your favor. 
-              Enter the vault where intelligence meets silence.
+              True agency requires total knowledge. True security requires total silence. 
+              We built the only AI that can have both.
             </p>
             
             <a 
@@ -109,22 +109,21 @@ export default function Home() {
           <div className="md:pr-12">
             <h2 className="text-5xl md:text-7xl font-serif mb-8 leading-none">
               The Paradox of <br />
-              <span className="text-white/40 italic">Open Intelligence.</span>
+              <span className="text-white/40 italic">Autonomous Trust.</span>
             </h2>
             <div className="space-y-8 text-lg text-white/70 font-light leading-relaxed">
               <p>
-                To win, you need the best models. To survive, you need to keep your data hidden. 
-                Until now, you had to choose.
+                To be useful, an agent must know everything about you. To be safe, it must reveal nothing to anyone else.
+                Until now, this was mathematically impossible.
               </p>
               <p>
-                Lugano breaks this binary. We are the invisible layer that allows you to deploy 
-                state-of-the-art AI on your proprietary data without it ever leaving your perimeter. 
-                It’s not just security; it’s sovereignty.
+                Lugano solves this paradox. We provide autonomous, agentic intelligence that operates entirely within 
+                a Zero-Knowledge environment. It thinks, plans, and executes—without ever exposing the data it touches.
               </p>
             </div>
             <div className="mt-12 pt-12 border-t border-white/10">
               <p className="text-2xl font-serif italic text-white">
-                "The most valuable intelligence is the kind nobody else can see."
+                "Intelligence without sovereignty is just surveillance."
               </p>
             </div>
           </div>
@@ -134,9 +133,9 @@ export default function Home() {
              
              <div className="flex flex-col justify-between h-full py-12">
                 {[
-                  { label: "Zero-Knowledge Proofs", status: "Validated" },
-                  { label: "Trusted Execution Envs", status: "Active" },
-                  { label: "Differential Privacy", status: "Enforced" }
+                  { label: "Zero-Knowledge Action", status: "Verified" },
+                  { label: "Sovereign Execution", status: "Active" },
+                  { label: "Cryptographic Silence", status: "Enforced" }
                 ].map((item, i) => (
                   <div key={i} className="group cursor-default">
                     <span className="block text-xs font-mono text-white/30 mb-2 uppercase tracking-widest">{item.status}</span>
@@ -154,29 +153,29 @@ export default function Home() {
           <div className="mb-24 md:flex items-end justify-between border-b border-white/10 pb-12">
             <h2 className="text-5xl md:text-7xl font-serif leading-none">
               The Architecture <br />
-              <span className="text-white/40">of Silence.</span>
+              <span className="text-white/40">of Agency.</span>
             </h2>
             <p className="mt-8 md:mt-0 max-w-md text-white/60 text-sm leading-relaxed">
-              True privacy isn't a policy. It's physics. We use advanced cryptography and hardware isolation 
-              to ensure your data remains mathematically invisible to the outside world.
+              We don't just encrypt storage; we encrypt thought. Our agents operate inside 
+              mathematically proven vaults, ensuring that your strategy remains yours alone.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-px bg-white/10 border border-white/10">
             {[
               {
-                title: "Compute Without Compromise",
-                desc: "Our orchestration engine doesn't just protect; it accelerates. Slash GPU waste by 90% while running fully encrypted workloads.",
-                meta: "Efficiency Arbitrage"
+                title: "Autonomous Execution",
+                desc: "An agent that doesn't just answer questions—it completes tasks. From complex financial modeling to strategic planning, without human-in-the-loop leaks.",
+                meta: "Full Agency"
               },
               {
                 title: "The Black Box",
-                desc: "Your data runs inside Trusted Execution Environments (TEEs). Even the cloud provider hosting the hardware cannot see what's inside.",
+                desc: "Your data runs inside Trusted Execution Environments (TEEs). Even we cannot see what the agent is thinking or doing on your behalf.",
                 meta: "Hardware-Level Isolation"
               },
               {
                 title: "Mathematical Certainty",
-                desc: "We don't ask you to trust us. We use Zero-Knowledge Proofs so you can verify the integrity of every computation yourself.",
+                desc: "We use Zero-Knowledge Proofs to verify that the agent performed the task correctly, without ever revealing the inputs or the logic used.",
                 meta: "Trustless Verification"
               }
             ].map((item, i) => (
